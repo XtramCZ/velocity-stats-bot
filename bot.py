@@ -35,7 +35,7 @@ async def stats(ctx):
     total_alts = 0
     total_servers = 0
     for key in api_keys:
-        res = requests.get(f'https://genefit.to/velocity/api/stats.php?key={key}').json()
+        res = requests.get(f'https://genefit.top/velocity/api/stats.php?key={key}').json()
         total_alts = total_alts + res['alts']
         total_servers = total_servers + res['total_servers']
         embed.add_field(name=f"VPS {api_keys.index(key)+1}", value=f"Alts: {res['alts']}\nServers: {res['total_servers']}\nTime running: {res['time_running']}")
